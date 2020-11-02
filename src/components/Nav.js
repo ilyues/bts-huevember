@@ -11,12 +11,12 @@ export default function Nav() {
       <Link to="/ab" className="nav-link">
         about + guidelines
       </Link>
-      <a href="#" className="nav-link">
+      <Link to="/wkly" className="nav-link">
         weekly schedule
-      </a>
-      <a href="#" className="nav-link">
+      </Link>
+      <Link to="alt" className="nav-link">
         busy bee schedule
-      </a>
+      </Link>
     </div>
   );
 }
