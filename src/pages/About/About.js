@@ -1,7 +1,7 @@
 import React from "react";
 import "./About.css";
 import Nav from "../../components/Nav";
-import pic from "../../assets/huevember.jpg";
+import pic from "../../assets/huevember.png";
 
 export default function About() {
   return (
@@ -49,8 +49,8 @@ export default function About() {
             </div>
           </div>
         </div>
-        <img className="drawing" src={pic} />
       </div>
+      <img className="drawing" src={pic} />
     </div>
   );
 }

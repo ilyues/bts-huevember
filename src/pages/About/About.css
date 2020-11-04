@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
-html,
-body {
-  background-color: #ffe8a6;
-  overflow: hidden;
-}
-
 a {
   text-decoration: none;
 }
@@ -15,13 +9,6 @@ a {
   display: flex;
   justify-content: center;
   height: 100vh;
-}
-
-.drawing {
-  position: absolute;
-  right: 5vw;
-  mix-blend-mode: multiply;
-  width: 45vw;
 }
 
 .about-container {
@@ -81,8 +68,8 @@ a {
 }
 
 /* Animations */
-
-.about {
+.about-container,
+.Nav {
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 2s; /* Firefox < 16 */
   -ms-animation: fadein 2s; /* Internet Explorer */
@@ -137,4 +124,11 @@ a {
   to {
     opacity: 1;
   }
+}
+.drawing {
+  position: absolute;
+  right: 5vw;
+  bottom: 24vh;
+  mix-blend-mode: multiply;
+  width: 45vw;
 }

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
-html,
 body {
   background-color: #ffe8a6;
   overflow: hidden;
@@ -15,6 +14,8 @@ a {
   display: flex;
   justify-content: center;
   height: 100vh;
+  background-color: #ffe8a6;
+  overflow: hidden;
 }
 
 .today-container {
@@ -172,7 +173,6 @@ a:visited {
 .palette {
   font-family: "Lato", sans-serif;
   font-size: 2.5vh;
-  color: #2e61e3;
   font-weight: 300;
   letter-spacing: 0.5vh;
   padding-left: 2.5vw;
@@ -270,5 +270,206 @@ ul {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #fffbf1;
+    overflow-y: scroll;
+  }
+  .home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: initial;
+    overflow: initial;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #fffbf1;
+  }
+
+  .today-container {
+    background-color: initial;
+    align-self: initial;
+    width: initial;
+    height: initial;
+    display: initial;
+    justify-content: initial;
+    align-items: initial;
+    padding: initial;
+  }
+
+  .tagline-container {
+    width: 80vw;
+  }
+  .tagline {
+    position: initial;
+    left: initial;
+    top: initial;
+    font-family: "Lato", sans-serif;
+    font-size: 4vw;
+    color: #2e61e3;
+    font-weight: 300;
+    letter-spacing: 1vw;
+    margin: 2vw;
+    padding-top: 8vw;
+    padding-left: 10vw;
+    z-index: 3;
+  }
+
+  .today {
+    position: initial;
+    left: initial;
+    top: initial;
+    font-family: "DM Serif Display", serif;
+    font-size: 13vw;
+    color: #5498e8;
+    z-index: 2;
+    margin: 3vw;
+    text-align: center;
+  }
+
+  .insp-header {
+    position: initial;
+    margin: 2vw;
+    padding: 1.5vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    background-color: rgb(230, 230, 247);
+    border: 1px solid #2e61e3;
+    z-index: 2;
+    height: 4vw;
+    border-radius: 100vw;
+    font-size: 2.5vw;
+    font-family: "Lato", "serif";
+    color: #2e61e3;
+    letter-spacing: 0.5vw;
+    display: table;
+  }
+
+  .insp-img {
+    position: initial;
+    height: auto;
+    width: 80vw;
+    padding-bottom: 5vw;
+  }
+
+  .insp-1,
+  .insp-2 {
+    position: initial;
+    left: initial;
+    bottom: initial;
+    top: initial;
+    right: initial;
+    width: initial;
+    max-height: initial;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: initial;
+    min-width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    padding: 0vw;
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+    margin: auto;
+  }
+
+  .daily-tagline {
+    position: initial;
+    top: initial;
+    padding-left: initial;
+    font-style: italic;
+    font-size: 3vw;
+    padding-bottom: 2vw;
+    font-weight: 300;
+    color: #5498e8;
+  }
+
+  .daily-prompt,
+  .weekly-prompt {
+    border-top: solid 1px #2e61e3;
+    position: initial;
+    height: initial;
+    padding: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+    padding-bottom: 6vw;
+    padding-top: 6vw;
+  }
+
+  .prompt-header {
+    padding-left: initial;
+    padding-bottom: initial;
+    font-family: "Lato", sans-serif;
+    font-size: 4vw;
+    color: #2e61e3;
+    font-weight: 600;
+    letter-spacing: 1vw;
+    padding: 1vw;
+    padding-left: initial;
+    text-transform: uppercase;
+  }
+
+  .prompt-text {
+    position: initial;
+    margin-top: initial;
+    padding-left: initial;
+    font-size: 10vw;
+    font-weight: 300;
+    letter-spacing: 0vw;
+    font-style: italic;
+  }
+
+  .palette {
+    padding-left: initial;
+    font-family: "Lato", sans-serif;
+    font-size: 5vw;
+    font-weight: 300;
+    letter-spacing: 1vw;
+    text-transform: lowercase;
+  }
+
+  .circle-1 {
+    position: initial;
+    padding: initial;
+    bottom: initial;
+    left: initial;
+    margin-left: 10vw;
+    width: 200%;
+  }
+  .circle-2 {
+    position: initial;
+    padding: initial;
+    top: initial;
+    margin-left: 10vw;
+    width: 200%;
+  }
+
+  ul {
+    margin: 0;
+    margin-left: -1vw;
+  }
+
+  .signature {
+    position: initial;
+    right: initial;
+    bottom: initial;
+    font-size: 3vw;
+    font-weight: 400;
+    color: #fc6d6d;
+    z-index: 4;
+    margin: auto;
+    padding: 3vw;
+    padding-bottom: 8vw;
+  }
+
+  .signature a {
+    font-weight: 600;
   }
 }

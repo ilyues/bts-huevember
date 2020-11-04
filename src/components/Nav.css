@@ -17,3 +17,9 @@
 .nav-link:hover {
   color: #eb5555;
 }
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+}

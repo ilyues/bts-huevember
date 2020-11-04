@@ -74,16 +74,20 @@ export default function Today() {
 
   return (
     <div className="home">
-      <Nav />
       <div className="today-container">
-        <div className="tagline">
-          <a href="https://twitter.com/search?q=%23BTShuevember2020&src=typeahead_click">
-            #BTSHUEVEMBER2020
-          </a>{" "}
-          with <a href="https://twitter.com/Katamism">Kata</a> +{" "}
-          <a href="https://twitter.com/kayedaily_">Kaye</a>!
+        <div className="tagline-container">
+          <div className="tagline">
+            <a href="https://twitter.com/search?q=%23BTShuevember2020&src=typeahead_click">
+              #BTSHUEVEMBER2020
+            </a>{" "}
+            with <a href="https://twitter.com/Katamism">Kata</a> +{" "}
+            <a href="https://twitter.com/kayedaily_">Kaye</a>!
+          </div>
         </div>
+
         <div className="today">{today}</div>
+        <Nav />
+
         <div className="daily-prompt">
           <div className="prompt-header">
             Day {upcomingDay.Day.toString().padStart(2, "0")}: {}
@@ -109,6 +113,44 @@ export default function Today() {
             </ul>
           </div>
         </div>
+        <div className="circle-2">
+          <svg viewBox="0 0 600 30">
+            <circle
+              cx={40}
+              cy={circle_y}
+              r={circle_r}
+              fill={upcomingDay.Colour1}
+            />
+            <circle
+              cx={80}
+              cy={circle_y}
+              r={circle_r}
+              fill={upcomingDay.Colour2}
+            />
+            <circle
+              cx={120}
+              cy={circle_y}
+              r={circle_r}
+              fill={upcomingDay.Colour3}
+            />
+            <circle
+              cx={160}
+              cy={circle_y}
+              r={circle_r}
+              fill={upcomingDay.Colour4}
+            />
+            <circle
+              cx={200}
+              cy={circle_y}
+              r={circle_r}
+              fill={upcomingDay.Colour5}
+            />
+          </svg>
+        </div>
+        <div className="insp-2">
+          <div className="insp-header">Day {upcomingDay.Day} inspo.png</div>
+          <img className="insp-img" src={upcomingDay.InspURL} />
+        </div>
 
         <div className="weekly-prompt">
           <div className="prompt-header">{currWeek.Name}:</div>
@@ -124,9 +166,8 @@ export default function Today() {
           </div>
         </div>
       </div>
-
       <div className="circle-1">
-        <svg viewBox="0 0 600 80">
+        <svg viewBox="0 0 600 30">
           <circle cx={40} cy={circle_y} r={circle_r} fill={currWeek.Colour1} />
           <circle cx={80} cy={circle_y} r={circle_r} fill={currWeek.Colour2} />
           <circle cx={120} cy={circle_y} r={circle_r} fill={currWeek.Colour3} />
@@ -134,48 +175,11 @@ export default function Today() {
           <circle cx={200} cy={circle_y} r={circle_r} fill={currWeek.Colour5} />
         </svg>
       </div>
-      <div className="circle-2">
-        <svg viewBox="0 0 600 80">
-          <circle
-            cx={40}
-            cy={circle_y}
-            r={circle_r}
-            fill={upcomingDay.Colour1}
-          />
-          <circle
-            cx={80}
-            cy={circle_y}
-            r={circle_r}
-            fill={upcomingDay.Colour2}
-          />
-          <circle
-            cx={120}
-            cy={circle_y}
-            r={circle_r}
-            fill={upcomingDay.Colour3}
-          />
-          <circle
-            cx={160}
-            cy={circle_y}
-            r={circle_r}
-            fill={upcomingDay.Colour4}
-          />
-          <circle
-            cx={200}
-            cy={circle_y}
-            r={circle_r}
-            fill={upcomingDay.Colour5}
-          />
-        </svg>
-      </div>
       <div className="insp-1">
         <div className="insp-header">{currWeek.Name} inspo.png</div>
         <img className="insp-img" src={currWeek.InspURL} />
       </div>
-      <div className="insp-2">
-        <div className="insp-header">Day {upcomingDay.Day} inspo.png</div>
-        <img className="insp-img" src={upcomingDay.InspURL} />
-      </div>
+
       <div className="signature">
         site by <a href="https://twitter.com/ilyues">@ilyues</a>
       </div>
