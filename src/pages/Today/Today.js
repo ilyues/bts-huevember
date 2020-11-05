@@ -74,6 +74,7 @@ export default function Today() {
 
   return (
     <div className="home">
+      <Nav />
       <div className="today-container">
         <div className="tagline-container">
           <div className="tagline">
@@ -86,13 +87,15 @@ export default function Today() {
         </div>
 
         <div className="today">{today}</div>
-        <Nav />
 
         <div className="daily-prompt">
           <div className="prompt-header">
             Day {upcomingDay.Day.toString().padStart(2, "0")}: {}
           </div>
           <div className="daily-tagline">next upcoming day</div>
+          <div className="daily-svg">
+            <img src={upcomingDay.promptURL} />
+          </div>
           <div className="palette">
             <ul>
               <li style={{ color: upcomingDay.Colour1 }}>

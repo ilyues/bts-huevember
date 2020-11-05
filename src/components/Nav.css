@@ -1,6 +1,7 @@
 .nav {
   position: absolute;
   top: 12vh;
+  margin: auto;
 }
 
 .nav-link {
