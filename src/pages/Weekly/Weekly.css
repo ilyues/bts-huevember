@@ -17,54 +17,87 @@ a {
   width: 62vw;
   height: 56vh;
   display: flex;
-  justify-content: normal;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 4vw;
 }
 
-.about-header {
+.weekly-header {
   font-family: "DM Serif Display", serif;
   font-size: 4vh;
   color: #5498e8;
 }
 
-.body-text {
+.weekly-prompt-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
+}
+
+.weekly-prompt-div {
+  margin: 0.5vw;
+  align-items: center;
+  padding: 1vw;
+  width: 11vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1vw;
+  border: 1px solid #ffe8a6;
+}
+
+.selected {
+  border: 1px solid #fc6d6d;
+}
+
+.weekly-prompt-text {
+  font-family: "DM Serif Display", serif;
+  color: #2e61e3;
+  font-style: italic;
+  font-size: 2vw;
+}
+
+.weekly-prompt-header {
   font-family: "Lato", sans-serif;
   font-size: 1.5vh;
   color: #2e61e3;
   font-weight: 400;
-  letter-spacing: 0.2vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  letter-spacing: 0.5vh;
+  text-transform: uppercase;
 }
 
-.body-text a:link,
-.body-text a:visited {
-  color: #fc6d6d;
+.weekly-palette {
+  font-family: "Lato", sans-serif;
+  color: #2e61e3;
+  font-size: 2vh;
+  font-weight: 300;
+  letter-spacing: 0.5vh;
+  text-transform: lowercase;
 }
 
-.body-text a:hover {
-  color: #eb5555;
-}
-
-.numbers {
-  font-family: "DM Serif Display", serif;
-  font-size: 5vh;
-  color: #fc6d6d;
-  width: 5vh;
-  font-style: italic;
-}
-
-.guideline {
+.weekly-insp-img-container {
+  min-height: 24vh;
+  max-width: 27.5vw;
+  padding: 2vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  justify-content: center;
 }
 
-.about-text {
-  width: 36vw;
+.weekly-insp-img {
+  height: 100%;
+}
+
+.weekly-circles {
+  position: absolute;
+  width: 10%;
+  top: 8vh;
+  right: 10vw;
+  padding: 1vw;
+  z-index: 5;
 }
 
 /* Animations */

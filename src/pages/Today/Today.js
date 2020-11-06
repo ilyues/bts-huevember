@@ -4,8 +4,8 @@ import "./Today.css";
 import axios from "axios";
 import Nav from "../../components/Nav";
 
-export default function Today() {
-  const [busyPrompt, setBusyPrompt] = React.useState(null);
+export default function Today(props) {
+  /* const [busyPrompt, setBusyPrompt] = React.useState(null);
   const [weeklyPrompt, setWeeklyPrompt] = React.useState(null);
   async function fetchData() {
     const busyRes = await axios.get(
@@ -38,10 +38,7 @@ export default function Today() {
   }
   if (!weeklyPrompt) {
     return <div></div>;
-  }
-  const mystyles = {
-    color: "#F4F4F4",
-  };
+  } */
 
   const currDay = parseInt(moment().format("D"));
   const today = moment().format("MMMM Do");
@@ -50,15 +47,15 @@ export default function Today() {
 
   for (var i = 0; i < 4; i++) {
     if (
-      currDay >= weeklyPrompt[i].fields.FirstDay &&
-      currDay <= weeklyPrompt[i].fields.LastDay
+      currDay >= props.weeklyPrompt[i].fields.FirstDay &&
+      currDay <= props.weeklyPrompt[i].fields.LastDay
     ) {
-      currWeek = weeklyPrompt[i].fields;
+      currWeek = props.weeklyPrompt[i].fields;
     }
   }
 
   if (!currWeek) {
-    currWeek = weeklyPrompt[0].fields;
+    currWeek = props.weeklyPrompt[0].fields;
   }
 
   const circle_r = 15;
@@ -66,9 +63,12 @@ export default function Today() {
 
   var j = 30;
   for (var i = 0; i < 11; i++) {
-    if (currDay <= busyPrompt[i].fields.Day && j > busyPrompt[i].fields.Day) {
-      j = busyPrompt[i].fields.Day;
-      upcomingDay = busyPrompt[i].fields;
+    if (
+      currDay <= props.busyPrompt[i].fields.Day &&
+      j > props.busyPrompt[i].fields.Day
+    ) {
+      j = props.busyPrompt[i].fields.Day;
+      upcomingDay = props.busyPrompt[i].fields;
     }
   }
 
@@ -156,7 +156,7 @@ export default function Today() {
         </div>
 
         <div className="weekly-prompt">
-          <div className="prompt-header">{currWeek.Name}:</div>
+          <div className="prompt-header">Week 0{currWeek.Name}:</div>
           <div className="prompt-text">{currWeek.Prompt}</div>
           <div className="palette">
             <ul>
@@ -179,7 +179,7 @@ export default function Today() {
         </svg>
       </div>
       <div className="insp-1">
-        <div className="insp-header">{currWeek.Name} inspo.png</div>
+        <div className="insp-header">Week 0{currWeek.Name} inspo.png</div>
         <img className="insp-img" src={currWeek.InspURL} />
       </div>
 
